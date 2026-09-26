@@ -5,6 +5,11 @@
     --font-orbitron: 'Orbitron', -apple-system, sans-serif;
     --font-space: 'Space Grotesk', -apple-system, sans-serif;
     --font-mono: 'Share Tech Mono', monospace;
+    --space-void: #02040a;
+    --space-panel: rgba(7, 14, 32, 0.72);
+    --space-cyan: #56e0ff;
+    --space-violet: #b78cff;
+    --space-mint: #55f2bd;
   }
 
   * {
@@ -17,9 +22,10 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #02040a;
+    background-color: var(--space-void);
     font-family: var(--font-space);
-    color: #e2e8f0;
+    color: #e7f5ff;
+    text-rendering: optimizeLegibility;
   }
 
   #root {
