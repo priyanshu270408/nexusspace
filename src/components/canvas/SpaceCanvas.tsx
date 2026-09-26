@@ -12,6 +12,7 @@ import { BlackHoleObject } from './BlackHoleObject';
 import { SatelliteObject } from './SatelliteObject';
 import { MissionControlObject } from './MissionControlObject';
 import { CameraController } from './CameraController';
+import { NexusCore } from './NexusCore';
 
 export const SpaceCanvas: React.FC = () => {
   return (
@@ -38,6 +39,7 @@ export const SpaceCanvas: React.FC = () => {
         <Suspense fallback={null}>
           <Starfield />
           <Nebula />
+          <NexusCore />
           <AsteroidBelt />
           <Spaceship />
 
