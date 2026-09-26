@@ -1,0 +1,375 @@
+export interface Destination {
+  id: string;
+  name: string;
+  callsign: string;
+  category: string;
+  tagline: string;
+  position: [number, number, number];
+  cameraOffset: [number, number, number];
+  color: string;
+  secondaryColor: string;
+  sector: string;
+  coordinates: string;
+  orbitRadius: number;
+  orbitSpeed: number;
+  scale: number;
+}
+
+export const DESTINATIONS: Destination[] = [
+  {
+    id: 'earth',
+    name: 'TERRA',
+    callsign: 'EARTH-01',
+    category: 'Mission Profile',
+    tagline: 'Home world of human origin & engineering foundation',
+    position: [-30, 2, -15],
+    cameraOffset: [0, 2.5, 9],
+    color: '#00f3ff',
+    secondaryColor: '#2563eb',
+    sector: 'SECTOR 01 // TERRA HOMEBASE',
+    coordinates: '28.45 N / 80.52 W',
+    orbitRadius: 33.5,
+    orbitSpeed: 0.12,
+    scale: 3.2,
+  },
+  {
+    id: 'mars',
+    name: 'ARES PRIME',
+    callsign: 'MARS-02',
+    category: 'Project Archive',
+    tagline: 'Frontier outpost housing verified engineering breakthroughs',
+    position: [34, -2, -22],
+    cameraOffset: [0, 2.2, 8.5],
+    color: '#ff5533',
+    secondaryColor: '#ff9900',
+    sector: 'SECTOR 02 // ARES FORGE',
+    coordinates: '18.65 S / 175.47 E',
+    orbitRadius: 40.5,
+    orbitSpeed: 0.08,
+    scale: 2.8,
+  },
+  {
+    id: 'alien',
+    name: 'KEPLER-186F',
+    callsign: 'NEXUS-PRIME',
+    category: 'Lab & Experiments',
+    tagline: 'Exotic alien biome of WebGL shaders & creative prototypes',
+    position: [-38, 14, 26],
+    cameraOffset: [0, 3, 10],
+    color: '#b5179e',
+    secondaryColor: '#7209b7',
+    sector: 'SECTOR 03 // EXOPLANET ANOMALY',
+    coordinates: '582.1 LY / CYGNUS CONST.',
+    orbitRadius: 48,
+    orbitSpeed: 0.06,
+    scale: 3.5,
+  },
+  {
+    id: 'station',
+    name: 'CITADEL-X',
+    callsign: 'ORBITAL STATION',
+    category: 'Core Capabilities',
+    tagline: 'Modular orbital habitat tracking technical proficiencies',
+    position: [18, 10, 26],
+    cameraOffset: [0, 2, 7.5],
+    color: '#38bdf8',
+    secondaryColor: '#00f3ff',
+    sector: 'SECTOR 04 // ORBITAL ARRAY',
+    coordinates: 'GEO-SYNC 35,786 KM',
+    orbitRadius: 33,
+    orbitSpeed: 0.15,
+    scale: 2.4,
+  },
+  {
+    id: 'blackhole',
+    name: 'SINGULARITY-X',
+    callsign: 'GARGANTUA',
+    category: 'Milestones & Honors',
+    tagline: 'Gravitational singularity warping milestones and awards',
+    position: [0, -16, -55],
+    cameraOffset: [0, 2.8, 12],
+    color: '#f72585',
+    secondaryColor: '#4cc9f0',
+    sector: 'SECTOR 05 // DEEP EVENT HORIZON',
+    coordinates: 'SCHWARZSCHILD RADIUS 9.8 KM',
+    orbitRadius: 57,
+    orbitSpeed: 0.03,
+    scale: 4.2,
+  },
+  {
+    id: 'satellite',
+    name: 'RELAY-9',
+    callsign: 'COMMS SATELLITE',
+    category: 'Transmission Relay',
+    tagline: 'High-gain deep space antenna broadcasting encrypted signals',
+    position: [-22, -12, 16],
+    cameraOffset: [0, 1.8, 6.5],
+    color: '#06d6a0',
+    secondaryColor: '#118ab2',
+    sector: 'SECTOR 06 // RELAY BEACON',
+    coordinates: 'FREQ 1420.405 MHZ (HI)',
+    orbitRadius: 28.5,
+    orbitSpeed: 0.2,
+    scale: 2.0,
+  },
+  {
+    id: 'missioncontrol',
+    name: 'NEXUS COMMAND',
+    callsign: 'MISSION CONTROL',
+    category: 'Dossier & Resume',
+    tagline: 'Orbital command center preserving complete professional dossier',
+    position: [26, -10, 12],
+    cameraOffset: [0, 2.2, 7.8],
+    color: '#e2e8f0',
+    secondaryColor: '#00f3ff',
+    sector: 'SECTOR 07 // COMMAND HEADQUARTERS',
+    coordinates: 'LAT 47.82 / LONG 91.42',
+    orbitRadius: 31,
+    orbitSpeed: 0.14,
+    scale: 2.2,
+  },
+];
+
+export const PROFILE_DATA = {
+  callsign: 'COMMANDER // ARCHITECT',
+  name: 'Alex Vance',
+  title: 'Senior Systems Architect & Creative Technologist',
+  specialization: 'High-Performance 3D Graphics • Distributed Systems • AI Infrastructure',
+  status: 'MISSION ACTIVE // READY FOR FLIGHT',
+  bio: 'Pioneering interactive digital frontiers at the intersection of spatial computing, distributed engineering, and cognitive intelligence. I build high-frequency graphics engines, resilient microservices, and fluid interfaces that bridge the gap between human intuition and machine precision.',
+  whoIAm: 'A full-stack systems engineer with a relentless obsession for performance, elegant typography, and mathematically sound 3D environments.',
+  whatIBuild: 'Production-ready WebGL/WebGPU applications, cloud-native distributed platforms, real-time telemetry processing pipelines, and AI agent frameworks.',
+  interests: [
+    'Orbital Mechanics & Astrodynamics',
+    'Real-time Raymarching & GLSL Shaders',
+    'Vector Databases & Knowledge Graphs',
+    'Low-Latency Network Protocols (QUIC / WebTransport)',
+    'Cognitive AI Swarms & Spatial Audio',
+  ],
+  careerGoals: 'To engineer the next-generation spatial computing operating systems and deep-tech platforms that expand human curiosity beyond known physical limits.',
+  metrics: [
+    { label: 'Systems Engineered', value: '45+' },
+    { label: 'Active Users Served', value: '250K+' },
+    { label: 'Uptime Reliability', value: '99.99%' },
+    { label: 'Years in Deep Tech', value: '6+' },
+  ],
+};
+
+export const PROJECTS_DATA = [
+  {
+    id: 'aether-net',
+    name: 'AETHER-NET // Autonomous Swarm Engine',
+    subtitle: 'Decentralized Edge Task Orchestrator',
+    description: 'Ultra-low latency peer-to-peer compute grid orchestrating autonomous distributed agents with Raft consensus, vector memory, and self-healing worker topologies.',
+    tech: ['Rust', 'WebAssembly', 'Go', 'gRPC', 'TypeScript', 'Docker'],
+    metrics: 'Sub-4ms dispatch latency across 2,000 edge nodes',
+    status: 'DEPLOYED & OPEN SOURCE',
+    github: 'https://github.com/example/aether-net',
+    demo: 'https://aether-net.demo.dev',
+    featured: true,
+  },
+  {
+    id: 'chronos-3d',
+    name: 'CHRONOS-3D // WebGPU Particle Engine',
+    subtitle: 'Real-Time Spatial Physics Simulation',
+    description: 'High-throughput compute shader simulation capable of rendering 1,000,000+ interactive gravitational particles and SPH fluids at 60 FPS in modern browsers.',
+    tech: ['WebGPU', 'WGSL', 'Three.js', 'React', 'TypeScript'],
+    metrics: '1M+ particles rendered with zero frame drops',
+    status: 'ACTIVE EXPERIMENT',
+    github: 'https://github.com/example/chronos-3d',
+    demo: 'https://chronos-sim.demo.dev',
+    featured: true,
+  },
+  {
+    id: 'neural-orbit',
+    name: 'NEURAL-ORBIT // Constellation Radar',
+    subtitle: 'Orbital Telemetry & Anomaly Radar',
+    description: 'Deep learning pipeline predicting low-Earth orbit constellation collisions and telemetry drift using temporal graph neural networks and live NORAD TLE data.',
+    tech: ['Python', 'PyTorch', 'FastAPI', 'Next.js', 'CesiumJS', 'Redis'],
+    metrics: '99.4% accuracy on conjunction warning assessments',
+    status: 'OPERATIONAL',
+    github: 'https://github.com/example/neural-orbit',
+    demo: 'https://neural-orbit.demo.dev',
+    featured: true,
+  },
+  {
+    id: 'synapse-db',
+    name: 'SYNAPSE-DB // High-Throughput Vector Core',
+    subtitle: 'Sub-Millisecond HNSW Memory Engine',
+    description: 'In-memory vector similarity search engine engineered for real-time semantic retrieval, quantization, and automatic memory-mapped persistence.',
+    tech: ['C++', 'Python Bindings', 'SIMD AVX-512', 'Kubernetes'],
+    metrics: '0.8ms query time for 10M 1536-dim vectors',
+    status: 'PRODUCTION READY',
+    github: 'https://github.com/example/synapse-db',
+    demo: 'https://synapse-db.demo.dev',
+    featured: false,
+  },
+  {
+    id: 'hyper-stream',
+    name: 'HYPER-STREAM // WebTransport Data Conduit',
+    subtitle: 'Next-Gen Binary Realtime Pipeline',
+    description: 'Bidirectional streaming telemetry hub replacing WebSockets with multiplexed HTTP/3 WebTransport for zero-head-of-line-blocking data feeds.',
+    tech: ['Go', 'TypeScript', 'HTTP/3', 'Protobuf', 'React'],
+    metrics: '4x faster throughput compared to standard WebSockets',
+    status: 'BETA RELEASE',
+    github: 'https://github.com/example/hyper-stream',
+    demo: 'https://hyper-stream.demo.dev',
+    featured: false,
+  },
+];
+
+export const EXPERIMENTS_DATA = [
+  {
+    id: 'exp-1',
+    title: 'Volumetric Gravitational Lensing',
+    type: 'GLSL Raymarching',
+    description: 'Dynamic spacetime curve simulation bending background starfield radiance according to general relativity geodesics.',
+    tags: ['Raymarching', 'Shaders', 'Astrophysics'],
+  },
+  {
+    id: 'exp-2',
+    title: 'Cellular Neural Automata Swarm',
+    type: 'Complex Systems',
+    description: 'Self-organizing topological patterns emerging from simple continuous convolution kernels on WebGL framebuffers.',
+    tags: ['Neural CA', 'GPU Compute', 'Emergence'],
+  },
+  {
+    id: 'exp-3',
+    title: '4D Hypercube Tesseract Projection',
+    type: 'Higher-Dimensional Math',
+    description: 'Real-time stereographic projection of a 4-dimensional tesseract rotating across 6 orthogonal coordinate planes.',
+    tags: ['4D Geometry', 'Mathematics', 'Three.js'],
+  },
+  {
+    id: 'exp-4',
+    title: 'Spatial Audio Synthesizer Matrix',
+    type: 'Audio Web API',
+    description: 'Generative cosmic soundscapes generated purely in code with modular FM synthesis, Doppler frequency shifts, and binaural panning.',
+    tags: ['Web Audio', 'DSP', 'Sound Design'],
+  },
+];
+
+export const SKILLS_DATA = {
+  programming: [
+    { name: 'TypeScript / JavaScript', level: 98, experience: '6 yrs', highlight: 'Expert' },
+    { name: 'Python', level: 95, experience: '5 yrs', highlight: 'Advanced' },
+    { name: 'C++', level: 90, experience: '4 yrs', highlight: 'Advanced' },
+    { name: 'Rust', level: 88, experience: '3 yrs', highlight: 'Proficient' },
+    { name: 'Go', level: 85, experience: '3 yrs', highlight: 'Proficient' },
+    { name: 'Java', level: 84, experience: '3 yrs', highlight: 'Solid' },
+  ],
+  webDevelopment: [
+    { name: 'React & Next.js', level: 98, experience: '6 yrs', highlight: 'Mastery' },
+    { name: 'Three.js & WebGL / WebGPU', level: 94, experience: '4 yrs', highlight: 'Mastery' },
+    { name: 'Node.js & Express / Bun', level: 92, experience: '5 yrs', highlight: 'Advanced' },
+    { name: 'Tailwind CSS & Sci-Fi UI', level: 96, experience: '5 yrs', highlight: 'Expert' },
+    { name: 'PostgreSQL & MongoDB', level: 90, experience: '4 yrs', highlight: 'Advanced' },
+    { name: 'GraphQL & gRPC / Protobuf', level: 89, experience: '3 yrs', highlight: 'Advanced' },
+  ],
+  aiAndData: [
+    { name: 'PyTorch & Transformers', level: 90, experience: '4 yrs', highlight: 'Advanced' },
+    { name: 'Vector DBs (Pinecone / Qdrant)', level: 92, experience: '3 yrs', highlight: 'Advanced' },
+    { name: 'Computer Vision & OpenCV', level: 86, experience: '3 yrs', highlight: 'Proficient' },
+    { name: 'Data Engineering & Pandas', level: 92, experience: '4 yrs', highlight: 'Advanced' },
+    { name: 'Autonomous Agent Frameworks', level: 94, experience: '2 yrs', highlight: 'Cutting-Edge' },
+  ],
+  toolsAndDevOps: [
+    { name: 'Git & GitHub Workflows', level: 98, experience: '6 yrs', highlight: 'Native' },
+    { name: 'Docker & Kubernetes', level: 92, experience: '4 yrs', highlight: 'Production' },
+    { name: 'Linux Kernel & Shell / Bash', level: 94, experience: '5 yrs', highlight: 'Advanced' },
+    { name: 'CI/CD & Cloud (AWS / GCP)', level: 88, experience: '4 yrs', highlight: 'Certified' },
+    { name: 'VS Code, Neovim & JetBrains', level: 96, experience: '6 yrs', highlight: 'Power User' },
+    { name: 'Figma & UI Prototyping', level: 88, experience: '4 yrs', highlight: 'Creative' },
+  ],
+};
+
+export const ACHIEVEMENTS_DATA = [
+  {
+    year: '2025',
+    title: '1st Place Winner — Global Deep Space Hackathon',
+    organization: 'International Aerospace & Web3 Foundation',
+    badge: 'GRAND PRIX',
+    description: 'Engineered an autonomous decentralized satellite telemetry mesh enabling edge-computed collision avoidance in orbital debris fields.',
+    icon: 'Trophy',
+  },
+  {
+    year: '2025',
+    title: 'AWS Certified Solutions Architect — Professional',
+    organization: 'Amazon Web Services',
+    badge: 'VERIFIED',
+    description: 'Demonstrated mastery in high-availability multi-region architectures, distributed state replication, and zero-trust security.',
+    icon: 'ShieldCheck',
+  },
+  {
+    year: '2024',
+    title: 'Best Research Paper Award — IEEE AI & Systems',
+    organization: 'Institute of Electrical and Electronics Engineers',
+    badge: 'HONOR',
+    description: 'Co-authored publication: "Temporal Graph Neural Networks for Dynamic Orbit Telemetry and Autonomous Conjunction Forecasting".',
+    icon: 'Scroll',
+  },
+  {
+    year: '2024',
+    title: 'Top Open-Source Contributor of the Year',
+    organization: 'Web3D Consortium & Graphics Working Group',
+    badge: 'CONTRIBUTOR',
+    description: 'Delivered core performance patches to WebGL shader loaders and instanced mesh bounding calculations serving millions of monthly canvas renders.',
+    icon: 'Code2',
+  },
+  {
+    year: '2023',
+    title: 'National Algorithmic Olympiad Finalist',
+    organization: 'National Computing Directorate',
+    badge: 'TOP 0.5%',
+    description: 'Ranked in the 99.5th percentile for dynamic programming, graph algorithms, and combinatorial network optimization.',
+    icon: 'Award',
+  },
+];
+
+export const RESUME_DATA = {
+  summary: 'Architect with 6+ years of specialized experience in high-performance WebGL/WebGPU rendering, distributed edge topologies, and deep-tech platforms. Proven track record of scaling low-latency services to hundreds of thousands of concurrent users while crafting world-class interactive visual experiences.',
+  education: [
+    {
+      degree: 'B.S. in Computer Science & Applied Mathematics',
+      school: 'California Institute of Technology / Top Tech University',
+      period: '2018 — 2022',
+      details: 'Summa Cum Laude (GPA 3.96/4.00). Focus on Distributed Systems, Computer Graphics, and Numerical Analysis.',
+    },
+  ],
+  experience: [
+    {
+      role: 'Lead Systems Architect',
+      company: 'Nexus Spatial Dynamics',
+      period: '2024 — Present',
+      points: [
+        'Spearheaded development of a real-time WebGPU spatial rendering engine reducing client GPU consumption by 42%.',
+        'Architected distributed microservices handling 45,000 telemetry events/sec with sub-5ms p99 latency.',
+        'Mentored an engineering squad of 8 senior and staff engineers across full-stack and graphics disciplines.',
+      ],
+    },
+    {
+      role: 'Senior Full-Stack & 3D Engineer',
+      company: 'Aetheria Interactive Technologies',
+      period: '2022 — 2024',
+      points: [
+        'Built interactive 3D browser simulations and digital twin dashboards utilized by defense and aerospace clients.',
+        'Engineered responsive real-time data pipelines using WebSockets, WebTransport, and Redis clusters.',
+        'Cut bundle load times from 8.4s to 1.2s via procedural geometry streaming and custom GLSL compression.',
+      ],
+    },
+    {
+      role: 'Software Engineering Resident',
+      company: 'DeepSpace Compute Labs',
+      period: '2021 — 2022',
+      points: [
+        'Implemented high-throughput C++ algorithms for spatial collision testing and particle physics acceleration.',
+        'Created developer telemetry tools and automated CI/CD benchmarking pipelines.',
+      ],
+    },
+  ],
+  certifications: [
+    'AWS Certified Solutions Architect — Professional',
+    'CKA — Certified Kubernetes Administrator',
+    'Deep Learning Specialization — DeepLearning.AI',
+  ],
+};
